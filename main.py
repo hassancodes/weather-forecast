@@ -62,4 +62,10 @@ Database['Temperature'] = Temperature
 Database['Day'] = real_day
 Database['Full-description'] = Full_description
 
-pprint.pprint(Database)
+# pprint.pprint(Database)
+
+
+#creating a dataframe
+DF = pd.DataFrame(Database,columns=Database.keys())
+
+DF.to_csv("weather.csv")
